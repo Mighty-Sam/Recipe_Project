@@ -11,7 +11,7 @@ public class UserController {
 
     @GetMapping("/")
     public String getPage(){
-        return "welcome to my recipe website!!!!!!!ㄅ";
+        return "welcome to my holy recipe website!!!!!!!ㄅ";
     }
 
 
