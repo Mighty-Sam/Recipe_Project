@@ -1,26 +1,20 @@
 package com.example.recipt_website_project.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String username;
+    @Column
     private String password;
+    @Column
     private String nickname;
 
 
-    public User() {
-    }
-
-    public User(Long id, String username, String password, String nickname) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.nickname = nickname;
-    }
     public String getUsername() {
         return username;
     }
