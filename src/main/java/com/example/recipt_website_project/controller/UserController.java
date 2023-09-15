@@ -1,5 +1,6 @@
 package com.example.recipt_website_project.controller;
 
+import com.example.recipt_website_project.entity.Result;
 import com.example.recipt_website_project.entity.User;
 import com.example.recipt_website_project.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +22,9 @@ public class UserController {
 
     // 查詢全部的user
     @GetMapping("/search")
-    public List<User> getAllUsers(){
-
-        return userRepo.findAll();
+    public Result  getAllUsers(){
+        List<User> userList = userRepo.findAll();
+        return Result.success(userList);
     }
 
     // 增加一個user
